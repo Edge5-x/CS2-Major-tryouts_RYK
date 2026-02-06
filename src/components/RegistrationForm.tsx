@@ -270,9 +270,8 @@ export default function RegistrationForm() {
 
                   <div className="space-y-2">
                     {[
-                      { label: 'JazzCash', number: '0300-1246307', holder: 'Muhammad Maaz' },
-                      { label: 'EasyPaisa', number: '0300-1246307', holder: 'Muhammad Maaz' },
-                      { label: 'Bank Transfer (HBL)', number: '12345678901234', holder: 'Muhammad Maaz' },
+                      { label: 'JazzCash', number: '0344-5323038', holder: 'Maaz' },
+                      { label: 'EasyPaisa', number: '0344-5323038', holder: 'Maaz' },
                     ].map((acc) => (
                       <div key={acc.label} className="bg-black/30 border border-white/[0.03] px-4 py-2.5 flex items-center justify-between gap-3">
                         <div>

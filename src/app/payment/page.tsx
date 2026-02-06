@@ -9,14 +9,14 @@ const PAYMENT_ACCOUNTS = [
   {
     label: 'JazzCash',
     icon: Smartphone,
-    number: '0300-1246307',
+    number: '0344-5323038',
     holder: 'Maaz',
     color: '#E5002B',
   },
   {
     label: 'EasyPaisa',
     icon: CreditCard,
-    number: '0300-1246307',
+    number: '0344-5323038',
     holder: 'Maaz',
     color: '#4CB050',
   },
