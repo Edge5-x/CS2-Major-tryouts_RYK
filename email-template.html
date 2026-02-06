@@ -1,0 +1,419 @@
+<!--
+  ╔══════════════════════════════════════════════════════════╗
+  ║  CS2 PAKISTAN MAJOR 2026 — Supabase Invite Email        ║
+  ║                                                         ║
+  ║  SUBJECT LINE (paste in Subject field):                 ║
+  ║  🎮 Registration Confirmed — CS2 Pakistan Major 2026    ║
+  ║                                                         ║
+  ║  BODY (paste everything below this comment block        ║
+  ║  into the Body editor in Supabase Dashboard →           ║
+  ║  Auth → Email Templates → Invite User → Source)         ║
+  ╚══════════════════════════════════════════════════════════╝
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CS2 Pakistan Major 2026 — Registration Confirmed</title>
+</head>
+<body style="margin:0; padding:0; background-color:#0a0a0a; font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif; -webkit-font-smoothing:antialiased;">
+
+  <!-- Outer wrapper -->
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#0a0a0a; padding:32px 16px;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px; width:100%;">
+
+          <!-- ═══════════ TOP ACCENT BAR ═══════════ -->
+          <tr>
+            <td style="height:4px; background:linear-gradient(90deg, #EB6B09 0%, #FF8A3D 40%, #EB6B09 70%, #D35E08 100%);"></td>
+          </tr>
+
+          <!-- ═══════════ HERO HEADER ═══════════ -->
+          <tr>
+            <td style="background:linear-gradient(135deg, #141414 0%, #1a1a1a 50%, #141414 100%); padding:40px 40px 32px; text-align:center; border-left:1px solid rgba(255,255,255,0.04); border-right:1px solid rgba(255,255,255,0.04);">
+
+              <!-- CS2 Logo / Badge -->
+              <div style="display:inline-block; background:rgba(235,107,9,0.1); border:2px solid rgba(235,107,9,0.3); padding:12px 28px; margin-bottom:20px;">
+                <span style="color:#EB6B09; font-size:11px; font-weight:800; letter-spacing:5px; text-transform:uppercase;">COUNTER-STRIKE 2</span>
+              </div>
+
+              <h1 style="margin:0; color:#ffffff; font-size:26px; font-weight:900; letter-spacing:1px; line-height:1.2;">
+                PAKISTAN MAJOR 2026
+              </h1>
+              <p style="margin:6px 0 0; color:rgba(255,255,255,0.35); font-size:12px; letter-spacing:4px; text-transform:uppercase; font-weight:600;">
+                Rahim Yar Khan Tryouts
+              </p>
+
+              <!-- Diagonal accent line -->
+              <div style="margin:24px auto 0; width:60px; height:3px; background:linear-gradient(90deg, transparent, #EB6B09, transparent);"></div>
+            </td>
+          </tr>
+
+          <!-- ═══════════ CONFIRMATION BADGE ═══════════ -->
+          <tr>
+            <td style="background:#141414; padding:28px 40px 0; text-align:center; border-left:1px solid rgba(255,255,255,0.04); border-right:1px solid rgba(255,255,255,0.04);">
+              <table cellpadding="0" cellspacing="0" border="0" align="center">
+                <tr>
+                  <td style="background:rgba(34,197,94,0.08); border:1px solid rgba(34,197,94,0.25); padding:10px 32px;">
+                    <span style="color:#22C55E; font-size:13px; font-weight:800; letter-spacing:3px; text-transform:uppercase;">
+                      ✓ REGISTRATION CONFIRMED
+                    </span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ═══════════ GREETING ═══════════ -->
+          <tr>
+            <td style="background:#141414; padding:28px 40px 0; border-left:1px solid rgba(255,255,255,0.04); border-right:1px solid rgba(255,255,255,0.04);">
+              <h2 style="margin:0; color:#ffffff; font-size:20px; font-weight:700;">
+                Welcome aboard, {{ .Data.name }}!
+              </h2>
+              <p style="color:rgba(255,255,255,0.4); font-size:14px; line-height:1.7; margin:10px 0 0;">
+                Your registration for the <strong style="color:#EB6B09;">CS2 Pakistan Major 2026 — Rahim Yar Khan Tryouts</strong> has been received. Review your details below and complete payment to lock in your slot.
+              </p>
+            </td>
+          </tr>
+
+          <!-- ═══════════ REGISTRATION DETAILS CARD ═══════════ -->
+          <tr>
+            <td style="background:#141414; padding:24px 40px 0; border-left:1px solid rgba(255,255,255,0.04); border-right:1px solid rgba(255,255,255,0.04);">
+
+              <!-- Card header -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#1a1a1a; border:1px solid rgba(255,255,255,0.06);">
+                <tr>
+                  <td style="background:rgba(235,107,9,0.08); padding:12px 20px; border-bottom:1px solid rgba(235,107,9,0.15);">
+                    <span style="color:#EB6B09; font-size:11px; font-weight:800; letter-spacing:3px; text-transform:uppercase;">
+                      ◆ Your Registration
+                    </span>
+                  </td>
+                </tr>
+
+                <!-- Reg ID highlight -->
+                <tr>
+                  <td style="padding:20px 20px 16px; border-bottom:1px solid rgba(255,255,255,0.04);">
+                    <span style="color:rgba(255,255,255,0.3); font-size:10px; text-transform:uppercase; letter-spacing:2px; display:block; margin-bottom:4px;">Registration ID</span>
+                    <span style="color:#EB6B09; font-size:22px; font-weight:800; font-family:'Courier New',monospace; letter-spacing:2px;">{{ .Data.reg_id }}</span>
+                  </td>
+                </tr>
+
+                <!-- Detail rows -->
+                <tr>
+                  <td style="padding:0 20px 16px;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.03); width:140px;">
+                          <span style="color:rgba(255,255,255,0.3); font-size:12px;">Name</span>
+                        </td>
+                        <td style="padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.03);">
+                          <span style="color:#ffffff; font-size:13px; font-weight:600;">{{ .Data.name }}</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.03);">
+                          <span style="color:rgba(255,255,255,0.3); font-size:12px;">Email</span>
+                        </td>
+                        <td style="padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.03);">
+                          <span style="color:#5EB7F7; font-size:13px;">{{ .Email }}</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.03);">
+                          <span style="color:rgba(255,255,255,0.3); font-size:12px;">Steam Profile</span>
+                        </td>
+                        <td style="padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.03);">
+                          <a href="{{ .Data.steam_id }}" style="color:#5EB7F7; font-size:13px; text-decoration:none; word-break:break-all;">{{ .Data.steam_id }}</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.03);">
+                          <span style="color:rgba(255,255,255,0.3); font-size:12px;">Premier Rating</span>
+                        </td>
+                        <td style="padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.03);">
+                          <span style="color:#EB6B09; font-size:13px; font-weight:700;">{{ .Data.premier_rating }}</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding:10px 0;">
+                          <span style="color:rgba(255,255,255,0.3); font-size:12px;">City</span>
+                        </td>
+                        <td style="padding:10px 0;">
+                          <span style="color:#ffffff; font-size:13px;">{{ .Data.city }}</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ═══════════ PAYMENT INFO ═══════════ -->
+          <tr>
+            <td style="background:#141414; padding:24px 40px 0; border-left:1px solid rgba(255,255,255,0.04); border-right:1px solid rgba(255,255,255,0.04);">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:rgba(235,107,9,0.04); border:1px solid rgba(235,107,9,0.15); border-left:4px solid #EB6B09;">
+                <tr>
+                  <td style="padding:24px;">
+                    <h3 style="margin:0 0 10px; color:#EB6B09; font-size:15px; font-weight:800;">
+                      COMPLETE YOUR REGISTRATION
+                    </h3>
+                    <p style="color:rgba(255,255,255,0.45); font-size:13px; line-height:1.7; margin:0 0 20px;">
+                      Your registration is pending confirmation. Please visit our payment page for the full entry fee details, account numbers, and step-by-step instructions.
+                    </p>
+
+                    <!-- Payment page button -->
+                    <table cellpadding="0" cellspacing="0" border="0" align="center" style="margin-bottom:20px;">
+                      <tr>
+                        <td style="background:#EB6B09; padding:14px 36px; text-align:center;">
+                          <a href="{{ .SiteURL }}/payment" style="color:#ffffff; font-size:14px; font-weight:800; text-decoration:none; letter-spacing:1px; text-transform:uppercase; font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;">View Payment Instructions →</a>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="background:rgba(235,107,9,0.08); border:1px solid rgba(235,107,9,0.12); padding:14px; text-align:center;">
+                          <span style="color:rgba(255,255,255,0.5); font-size:12px; line-height:1.6;">
+                            Your Registration ID: <strong style="color:#EB6B09; font-family:'Courier New',monospace; font-size:14px;"> {{ .Data.reg_id }} </strong>
+                            <br/>Include this ID when making your payment.
+                          </span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ═══════════ NEXT STEPS ═══════════ -->
+          <tr>
+            <td style="background:#141414; padding:24px 40px 0; border-left:1px solid rgba(255,255,255,0.04); border-right:1px solid rgba(255,255,255,0.04);">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#1a1a1a; border:1px solid rgba(255,255,255,0.06);">
+                <tr>
+                  <td style="padding:12px 20px; border-bottom:1px solid rgba(255,255,255,0.04);">
+                    <span style="color:#ffffff; font-size:11px; font-weight:800; letter-spacing:3px; text-transform:uppercase;">
+                      ◆ Next Steps
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px;">
+                    <!-- Step 1 -->
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:16px;">
+                      <tr>
+                        <td width="36" valign="top">
+                          <div style="width:28px; height:28px; background:rgba(235,107,9,0.15); border:1px solid rgba(235,107,9,0.3); text-align:center; line-height:28px;">
+                            <span style="color:#EB6B09; font-size:13px; font-weight:800;">1</span>
+                          </div>
+                        </td>
+                        <td style="padding-left:12px;">
+                          <span style="color:#ffffff; font-size:13px; font-weight:700; display:block; margin-bottom:3px;">Complete Entry Fee</span>
+                          <span style="color:rgba(255,255,255,0.35); font-size:12px; line-height:1.5;">Follow the instructions shown on the registration confirmation page to finalize your entry.</span>
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- Step 2 -->
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:16px;">
+                      <tr>
+                        <td width="36" valign="top">
+                          <div style="width:28px; height:28px; background:rgba(235,107,9,0.15); border:1px solid rgba(235,107,9,0.3); text-align:center; line-height:28px;">
+                            <span style="color:#EB6B09; font-size:13px; font-weight:800;">2</span>
+                          </div>
+                        </td>
+                        <td style="padding-left:12px;">
+                          <span style="color:#ffffff; font-size:13px; font-weight:700; display:block; margin-bottom:3px;">Submit Confirmation</span>
+                          <span style="color:rgba(255,255,255,0.35); font-size:12px; line-height:1.5;">Contact us on WhatsApp at <strong style="color:#ffffff;">+92 300 1246307</strong> with your Reg ID for verification.</span>
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- Step 3 -->
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:16px;">
+                      <tr>
+                        <td width="36" valign="top">
+                          <div style="width:28px; height:28px; background:rgba(235,107,9,0.15); border:1px solid rgba(235,107,9,0.3); text-align:center; line-height:28px;">
+                            <span style="color:#EB6B09; font-size:13px; font-weight:800;">3</span>
+                          </div>
+                        </td>
+                        <td style="padding-left:12px;">
+                          <span style="color:#ffffff; font-size:13px; font-weight:700; display:block; margin-bottom:3px;">Receive Confirmation</span>
+                          <span style="color:rgba(255,255,255,0.35); font-size:12px; line-height:1.5;">We'll confirm your spot via WhatsApp once everything is verified. Keep your Reg ID handy.</span>
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- Step 4 -->
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td width="36" valign="top">
+                          <div style="width:28px; height:28px; background:rgba(34,197,94,0.15); border:1px solid rgba(34,197,94,0.3); text-align:center; line-height:28px;">
+                            <span style="color:#22C55E; font-size:13px; font-weight:800;">4</span>
+                          </div>
+                        </td>
+                        <td style="padding-left:12px;">
+                          <span style="color:#ffffff; font-size:13px; font-weight:700; display:block; margin-bottom:3px;">Show Up &amp; Compete!</span>
+                          <span style="color:rgba(255,255,255,0.35); font-size:12px; line-height:1.5;">Arrive at the venue by <strong style="color:#ffffff;">10:30 AM</strong> for check-in. Bring your CNIC and this email.</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ═══════════ EVENT DETAILS ═══════════ -->
+          <tr>
+            <td style="background:#141414; padding:24px 40px 0; border-left:1px solid rgba(255,255,255,0.04); border-right:1px solid rgba(255,255,255,0.04);">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#1a1a1a; border:1px solid rgba(255,255,255,0.06);">
+                <tr>
+                  <td style="padding:12px 20px; border-bottom:1px solid rgba(255,255,255,0.04);">
+                    <span style="color:#ffffff; font-size:11px; font-weight:800; letter-spacing:3px; text-transform:uppercase;">
+                      ◆ Event Details
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px; text-align:center;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="padding:8px 0; text-align:center;">
+                          <span style="color:rgba(255,255,255,0.3); font-size:10px; text-transform:uppercase; letter-spacing:2px; display:block; margin-bottom:4px;">Date</span>
+                          <span style="color:#ffffff; font-size:16px; font-weight:800;">Sunday, February 15, 2026</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding:8px 0; text-align:center; border-top:1px solid rgba(255,255,255,0.04);">
+                          <span style="color:rgba(255,255,255,0.3); font-size:10px; text-transform:uppercase; letter-spacing:2px; display:block; margin-bottom:4px;">Time</span>
+                          <span style="color:#ffffff; font-size:16px; font-weight:800;">11:00 AM</span>
+                          <span style="color:rgba(255,255,255,0.3); font-size:12px; display:block; margin-top:2px;">Check-in opens at 10:30 AM</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding:8px 0; text-align:center; border-top:1px solid rgba(255,255,255,0.04);">
+                          <span style="color:rgba(255,255,255,0.3); font-size:10px; text-transform:uppercase; letter-spacing:2px; display:block; margin-bottom:4px;">Venue</span>
+                          <span style="color:#ffffff; font-size:16px; font-weight:800;">Etihad Club</span>
+                          <span style="color:rgba(255,255,255,0.3); font-size:12px; display:block; margin-top:2px;">Rahim Yar Khan, Punjab, Pakistan</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding:8px 0; text-align:center; border-top:1px solid rgba(255,255,255,0.04);">
+                          <span style="color:rgba(255,255,255,0.3); font-size:10px; text-transform:uppercase; letter-spacing:2px; display:block; margin-bottom:4px;">Format</span>
+                          <span style="color:#ffffff; font-size:14px; font-weight:700;">5v5 • BO1 Groups → BO3 Playoffs</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ═══════════ WHAT TO BRING ═══════════ -->
+          <tr>
+            <td style="background:#141414; padding:24px 40px 0; border-left:1px solid rgba(255,255,255,0.04); border-right:1px solid rgba(255,255,255,0.04);">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:rgba(94,183,247,0.04); border:1px solid rgba(94,183,247,0.12);">
+                <tr>
+                  <td style="padding:20px;">
+                    <h3 style="margin:0 0 12px; color:#5EB7F7; font-size:13px; font-weight:800; letter-spacing:2px; text-transform:uppercase;">
+                      🎒 What to Bring
+                    </h3>
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="padding:4px 0; color:rgba(255,255,255,0.5); font-size:13px;">◆ Your <strong style="color:#ffffff;">CNIC</strong> (original, for identity verification)</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:4px 0; color:rgba(255,255,255,0.5); font-size:13px;">◆ Your own <strong style="color:#ffffff;">mouse, keyboard &amp; headset</strong></td>
+                      </tr>
+                      <tr>
+                        <td style="padding:4px 0; color:rgba(255,255,255,0.5); font-size:13px;">◆ <strong style="color:#ffffff;">Steam account</strong> logged in with CS2 installed</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:4px 0; color:rgba(255,255,255,0.5); font-size:13px;">◆ This email or your <strong style="color:#EB6B09;">Registration ID</strong> for check-in</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:4px 0; color:rgba(255,255,255,0.5); font-size:13px;">◆ Payment confirmation screenshot</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ═══════════ RULES REMINDER ═══════════ -->
+          <tr>
+            <td style="background:#141414; padding:24px 40px 0; border-left:1px solid rgba(255,255,255,0.04); border-right:1px solid rgba(255,255,255,0.04);">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:rgba(231,76,60,0.04); border:1px solid rgba(231,76,60,0.12);">
+                <tr>
+                  <td style="padding:20px;">
+                    <h3 style="margin:0 0 12px; color:#E74C3C; font-size:13px; font-weight:800; letter-spacing:2px; text-transform:uppercase;">
+                      ⚡ Tournament Rules
+                    </h3>
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="padding:4px 0; color:rgba(255,255,255,0.5); font-size:12px; line-height:1.5;">◆ All participants must be <strong style="color:#ffffff;">16 years or older</strong></td>
+                      </tr>
+                      <tr>
+                        <td style="padding:4px 0; color:rgba(255,255,255,0.5); font-size:12px; line-height:1.5;">◆ <strong style="color:#E74C3C;">Zero tolerance</strong> for cheating — VAC/Game bans = instant disqualification</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:4px 0; color:rgba(255,255,255,0.5); font-size:12px; line-height:1.5;">◆ Players must arrive by <strong style="color:#ffffff;">10:30 AM</strong> — late arrivals forfeit their match</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:4px 0; color:rgba(255,255,255,0.5); font-size:12px; line-height:1.5;">◆ Admin decisions are <strong style="color:#ffffff;">final</strong></td>
+                      </tr>
+                      <tr>
+                        <td style="padding:4px 0; color:rgba(255,255,255,0.5); font-size:12px; line-height:1.5;">◆ Teams formed at the venue based on Premier Rating seeding</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ═══════════ CONTACT & SUPPORT ═══════════ -->
+          <tr>
+            <td style="background:#141414; padding:28px 40px 0; border-left:1px solid rgba(255,255,255,0.04); border-right:1px solid rgba(255,255,255,0.04);">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#1a1a1a; border:1px solid rgba(255,255,255,0.06); text-align:center;">
+                <tr>
+                  <td style="padding:20px;">
+                    <span style="color:rgba(255,255,255,0.3); font-size:10px; text-transform:uppercase; letter-spacing:2px; display:block; margin-bottom:10px;">Need Help?</span>
+                    <span style="color:#ffffff; font-size:14px; display:block; margin-bottom:4px;">
+                      WhatsApp: <strong>+92 300 1246307</strong>
+                    </span>
+                    <span style="color:rgba(255,255,255,0.4); font-size:13px; display:block;">
+                      Email: <a href="mailto:cs2majorryk@gmail.com" style="color:#5EB7F7; text-decoration:none;">cs2majorryk@gmail.com</a>
+                    </span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ═══════════ FOOTER ═══════════ -->
+          <tr>
+            <td style="background:#141414; padding:32px 40px; text-align:center; border-left:1px solid rgba(255,255,255,0.04); border-right:1px solid rgba(255,255,255,0.04); border-bottom:1px solid rgba(255,255,255,0.04);">
+              <div style="margin-bottom:16px; width:40px; height:2px; background:linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); display:inline-block;"></div>
+              <p style="color:rgba(255,255,255,0.12); font-size:11px; margin:0; line-height:1.6;">
+                © 2026 CS2 Pakistan Major — Rahim Yar Khan<br/>
+                This is an automated confirmation. Do not reply to this email.
+              </p>
+            </td>
+          </tr>
+
+          <!-- ═══════════ BOTTOM ACCENT BAR ═══════════ -->
+          <tr>
+            <td style="height:4px; background:linear-gradient(90deg, #D35E08 0%, #EB6B09 30%, #FF8A3D 60%, #EB6B09 100%);"></td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

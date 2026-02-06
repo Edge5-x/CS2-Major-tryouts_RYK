@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cs2-orange: #EB6B09;
+  --cs2-orange-dark: #D35E08;
+  --cs2-dark: #0C0C0C;
+  --cs2-dark-lighter: #141414;
+  --angle: 25deg;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--cs2-dark);
+  color: #E5E5E5;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* ── Scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0C0C0C; }
+::-webkit-scrollbar-thumb { background: #444; border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: #fff; }
+
+/* ── Selection ─────────────────────────────────────── */
+::selection {
+  background: rgba(235, 107, 9, 0.3);
+  color: white;
+}
+
+/* ── Hero BG — angular gradient ────────────────────── */
+.hero-bg {
+  background:
+    linear-gradient(160deg, rgba(12,12,12,0.3) 0%, rgba(12,12,12,0.85) 55%, rgba(12,12,12,1) 100%),
+    url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1920&q=80') center/cover no-repeat;
+}
+
+/* ── Diagonal grid pattern ─────────────────────────── */
+.bg-grid-diagonal {
+  background-image:
+    repeating-linear-gradient(
+      25deg,
+      transparent,
+      transparent 79px,
+      rgba(255,255,255,0.015) 79px,
+      rgba(255,255,255,0.015) 80px
+    ),
+    repeating-linear-gradient(
+      -25deg,
+      transparent,
+      transparent 79px,
+      rgba(255,255,255,0.015) 79px,
+      rgba(255,255,255,0.015) 80px
+    );
+}
+
+/* ── Diagonal stripe decoration ────────────────────── */
+.diagonal-stripe-bg {
+  background-image: repeating-linear-gradient(
+    25deg,
+    transparent,
+    transparent 30px,
+    rgba(235, 107, 9, 0.025) 30px,
+    rgba(235, 107, 9, 0.025) 60px
+  );
+}
+
+/* ── Orange glow — used sparingly ──────────────────── */
+.glow-orange {
+  text-shadow: 0 0 60px rgba(235, 107, 9, 0.5), 0 0 120px rgba(235, 107, 9, 0.2);
+}
+
+/* ── Angular clip-path utilities ───────────────────── */
+.clip-angular {
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+}
+
+.clip-angular-sm {
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.clip-angular-lg {
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+}
+
+/* ── Buttons ───────────────────────────────────────── */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 40px rgba(235, 107, 9, 0.35), 0 0 0 1px rgba(235, 107, 9, 0.2);
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%; width: 100%; height: 100%;
+  background: linear-gradient(115deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s;
+}
+
+.btn-primary:hover::after { left: 100%; }
+
+.btn-secondary {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+
+.btn-secondary:hover {
+  transform: translateY(-1px);
+  border-color: rgba(235, 107, 9, 0.3);
+}
+
+
+/* ── Input focus — angular ─────────────────────────── */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--cs2-orange) !important;
+  box-shadow: 0 0 0 2px rgba(235, 107, 9, 0.15), inset 0 0 20px rgba(235, 107, 9, 0.03);
+}
+
+/* ── Skewed accent bar ─────────────────────────────── */
+.skew-accent {
+  display: inline-block;
+  width: 4px;
+  height: 24px;
+  background: var(--cs2-orange);
+  transform: skewX(-25deg);
+  margin-right: 12px;
+}
+
+.skew-accent-sm {
+  display: inline-block;
+  width: 3px;
+  height: 16px;
+  background: var(--cs2-orange);
+  transform: skewX(-25deg);
+  margin-right: 8px;
+}
+
+/* ── Angular nav link underline ────────────────────── */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--cs2-orange);
+  transform: skewX(-25deg);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ── Diamond bullet ────────────────────────────────── */
+.diamond-bullet {
+  width: 6px;
+  height: 6px;
+  background: var(--cs2-orange);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* ── Hero orange diagonal slab ─────────────────────── */
+.hero-diagonal-slab {
+  clip-path: polygon(35% 0, 100% 0, 100% 100%, 15% 100%);
+}
+
+/* ── Separator line (orange gradient) ──────────────── */
+/* ── Separator line (white-to-orange gradient) ──────────── */
+.sep-orange {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), rgba(235,107,9,0.4), rgba(255,255,255,0.25), transparent);
+}
+
+/* ── Keyframe: diagonal shimmer ────────────────────── */
+@keyframes diagonal-shimmer {
+  0% { transform: translateX(-100%) skewX(-25deg); }
+  100% { transform: translateX(200%) skewX(-25deg); }
+}
+
+.shimmer-diagonal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  animation: diagonal-shimmer 3s ease-in-out infinite;
+}
