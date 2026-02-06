@@ -62,11 +62,13 @@ export default function HeroSection() {
 
           {/* CS2 Logo */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.25 }} className="mb-6">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/CS2_logo.svg/1200px-CS2_logo.svg.png"
-              alt="Counter-Strike 2"
-              className="h-12 sm:h-16 mx-auto opacity-80"
-            />
+            <div className="inline-flex items-center gap-2 mx-auto">
+              <span className="text-3xl sm:text-4xl font-black font-display tracking-tighter text-white">
+                CS<span className="text-cs2-orange">2</span>
+              </span>
+              <span className="w-px h-6 bg-white/20" />
+              <span className="text-[10px] sm:text-xs text-white/40 uppercase tracking-[4px] font-bold">Counter-Strike</span>
+            </div>
           </motion.div>
 
           {/* Title — bigger, bolder */}
