@@ -21,6 +21,31 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid phone number. Use 03XX-XXXXXXX format' }, { status: 400 })
     }
 
+    // ── Validate Steam profile URL ──────────────────
+    if (!/^https?:\/\/(www\.)?steamcommunity\.com\/(id|profiles)\/[a-zA-Z0-9_-]+\/?$/.test(steamId.trim())) {
+      return NextResponse.json({ error: 'Invalid Steam profile URL. Use steamcommunity.com/id/... or /profiles/...' }, { status: 400 })
+    }
+
+    // ── Check for duplicate email or Steam profile ──
+    const supabaseCheck = createServiceClient()
+    const { data: existing } = await supabaseCheck
+      .from('registrations')
+      .select('email, steam_id')
+      .or(`email.eq.${email},steam_id.eq.${steamId.trim()}`)
+      .limit(1)
+
+    if (existing && existing.length > 0) {
+      const dupEmail = existing.some((r: any) => r.email === email)
+      const dupSteam = existing.some((r: any) => r.steam_id === steamId.trim())
+      if (dupEmail && dupSteam) {
+        return NextResponse.json({ error: 'This email and Steam profile are already registered.' }, { status: 409 })
+      } else if (dupEmail) {
+        return NextResponse.json({ error: 'This email is already registered.' }, { status: 409 })
+      } else {
+        return NextResponse.json({ error: 'This Steam profile is already registered.' }, { status: 409 })
+      }
+    }
+
     // ── Generate registration ID ────────────────────
     const regId = `RYK-2026-${Date.now().toString(36).toUpperCase()}`
 

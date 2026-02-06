@@ -147,18 +147,21 @@ export default function RegistrationForm() {
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [regId, setRegId] = useState('')
   const [errorMsg, setErrorMsg] = useState('')
-  const [fieldErrors, setFieldErrors] = useState<{ cnic?: string; phone?: string }>({})
+  const [fieldErrors, setFieldErrors] = useState<{ cnic?: string; phone?: string; steamId?: string }>({})
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     // ── Client-side validation ──
-    const errors: { cnic?: string; phone?: string } = {}
+    const errors: { cnic?: string; phone?: string; steamId?: string } = {}
     if (!CNIC_REGEX.test(form.cnic)) {
       errors.cnic = 'Enter a valid CNIC (e.g. 36302-1234567-1)'
     }
     if (!PHONE_REGEX.test(form.phone)) {
       errors.phone = 'Enter a valid phone (e.g. 0300-1234567)'
+    }
+    if (!/^https?:\/\/(www\.)?steamcommunity\.com\/(id|profiles)\/[a-zA-Z0-9_-]+\/?$/.test(form.steamId.trim())) {
+      errors.steamId = 'Enter a valid Steam profile URL (steamcommunity.com/id/... or /profiles/...)'
     }
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors)
@@ -271,7 +274,7 @@ export default function RegistrationForm() {
                   <div className="space-y-2">
                     {[
                       { label: 'JazzCash', number: '0344-5323038', holder: 'Maaz' },
-                      { label: 'EasyPaisa', number: '0344-5323038', holder: 'Maaz' },
+                      { label: 'SadaPay', number: '0344-5323038', holder: 'Maaz' },
                     ].map((acc) => (
                       <div key={acc.label} className="bg-black/30 border border-white/[0.03] px-4 py-2.5 flex items-center justify-between gap-3">
                         <div>
@@ -369,8 +372,12 @@ export default function RegistrationForm() {
                     Gaming Profile
                   </h3>
                   <div className="space-y-3">
-                    <input type="url" required placeholder="Steam Profile URL (steamcommunity.com/id/...)"
-                      value={form.steamId} onChange={e => setForm({ ...form, steamId: e.target.value })} className={inp} />
+                    <div>
+                      <input type="url" required placeholder="Steam Profile URL (steamcommunity.com/id/...)"
+                        value={form.steamId} onChange={e => { setForm({ ...form, steamId: e.target.value }); setFieldErrors(prev => ({ ...prev, steamId: undefined })) }}
+                        className={`${inp} ${fieldErrors.steamId ? 'border-red-500/60 focus:border-red-500' : ''}`} />
+                      {fieldErrors.steamId && <p className="text-red-400 text-[11px] mt-1 ml-1">{fieldErrors.steamId}</p>}
+                    </div>
 
                     {/* Premier Rating — Custom Dropdown with tier colors */}
                     <CustomDropdown

@@ -14,11 +14,11 @@ const PAYMENT_ACCOUNTS = [
     color: '#E5002B',
   },
   {
-    label: 'EasyPaisa',
+    label: 'SadaPay',
     icon: CreditCard,
     number: '0344-5323038',
     holder: 'Maaz',
-    color: '#4CB050',
+    color: '#7B61FF',
   },
 ]
 
