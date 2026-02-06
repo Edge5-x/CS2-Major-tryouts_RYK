@@ -21,7 +21,7 @@ const schedule = [
   { time: '2:45 PM', end: '4:00 PM', title: 'Groups — Round 3', desc: 'Final group stage matches. Top 2 from each group advance to the playoff bracket.', icon: Swords, dur: '75 min', hot: false, phase: 'afternoon' as SchedulePhase, tag: 'BO1' },
   { time: '4:00 PM', end: '5:30 PM', title: 'Quarterfinals', desc: 'Single elimination BO1. The bracket narrows — 8 teams become 4.', icon: Target, dur: '90 min', hot: false, phase: 'afternoon' as SchedulePhase, tag: 'PLAYOFFS' },
   { time: '5:30 PM', end: '7:30 PM', title: 'Semifinals', desc: 'Best-of-3 series. Only 2 teams will remain to fight for the championship title.', icon: Flame, dur: '120 min', hot: true, phase: 'evening' as SchedulePhase, tag: 'BO3' },
-  { time: '7:30 PM', end: '10:00 PM', title: 'Grand Finals', desc: 'The championship BO3. Two teams battle for the $2,500 grand prize. Everything on the line.', icon: Crown, dur: '150 min', hot: true, phase: 'evening' as SchedulePhase, tag: 'FINALS' },
+  { time: '7:30 PM', end: '10:00 PM', title: 'Grand Finals', desc: 'The championship BO3. Two teams battle for the $250 grand prize. Everything on the line.', icon: Crown, dur: '150 min', hot: true, phase: 'evening' as SchedulePhase, tag: 'FINALS' },
   { time: '10:00 PM', end: '10:30 PM', title: 'Prize Ceremony', desc: 'Winners crowned, MVP announced, prize money distributed. Photos and celebration.', icon: Trophy, dur: '30 min', hot: false, phase: 'evening' as SchedulePhase, tag: 'CEREMONY' },
 ]
 

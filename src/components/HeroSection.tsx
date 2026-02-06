@@ -119,10 +119,10 @@ export default function HeroSection() {
             className="grid grid-cols-4 gap-3 max-w-lg mx-auto mb-12"
           >
             {[
-              { v: 5000, p: '$', l: 'Prize' },
+              { v: 500, p: '$', l: 'Prize' },
               { v: 40, l: 'Players' },
               { v: 8, l: 'Teams' },
-              { v: 500, p: '$', l: 'MVP' },
+              { v: 50, p: '$', l: 'MVP' },
             ].map((s, i) => (
               <div key={i}
                 className="text-center bg-cs2-dark-card/60 border border-white/[0.04] py-3 px-2 relative overflow-hidden"

@@ -60,7 +60,7 @@ export default function AboutSection() {
           {[
             { icon: User, title: 'Solo Registration', desc: 'No team needed. Get drafted tournament day.' },
             { icon: Target, title: 'Skill-Based Draft', desc: 'Balanced teams based on Premier Rating.' },
-            { icon: Trophy, title: '$5,000 Prize Pool', desc: 'Real cash prizes + $500 MVP bonus.' },
+            { icon: Trophy, title: '$500 Prize Pool', desc: 'Real cash prizes + $50 MVP bonus.' },
             { icon: Shield, title: 'Anti-Cheat', desc: 'FACEIT AC required. Fair play enforced.' },
           ].map((f, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}

@@ -20,7 +20,7 @@ export default function Footer() {
             Ready to <span className="text-cs2-orange glow-orange">Compete?</span>
           </h3>
           <p className="text-white/35 text-sm mb-8 leading-relaxed">
-            Pakistan&apos;s biggest CS2 LAN tournament. $5,000 prize pool. 40 players. One champion.
+            Pakistan&apos;s biggest CS2 LAN tournament. $500 prize pool. 40 players. One champion.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">
             <a href="#register"

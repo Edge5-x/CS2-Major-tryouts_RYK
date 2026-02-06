@@ -5,10 +5,9 @@ import { Medal, Crown, Award, Star, Crosshair } from 'lucide-react'
 
 export default function PrizeSection() {
   const prizes = [
-    { place: '2ND', amount: '$1,500', per: '$300/player', icon: Medal, ord: 'md:order-1', big: false },
-    { place: '1ST', amount: '$2,500', per: '$500/player', icon: Crown, ord: 'md:order-2', big: true },
-    { place: '3RD', amount: '$750', per: '$150/player', icon: Award, ord: 'md:order-3', big: false },
-    { place: '4TH', amount: '$250', per: '$50/player', icon: Star, ord: 'md:order-4', big: false },
+    { place: '2ND', amount: '$150', per: '$30/player', icon: Medal, ord: 'md:order-1', big: false },
+    { place: '1ST', amount: '$250', per: '$50/player', icon: Crown, ord: 'md:order-2', big: true },
+    { place: '3RD', amount: '$100', per: '$20/player', icon: Award, ord: 'md:order-3', big: false },
   ]
 
   return (
@@ -27,12 +26,12 @@ export default function PrizeSection() {
             <div className="h-[2px] w-12 bg-gradient-to-l from-transparent to-white/40 transform skew-x-[25deg]" />
           </div>
           <h2 className="text-3xl sm:text-5xl font-black font-display text-white mb-2">
-            $5,000 <span className="text-cs2-orange">Prize Pool</span>
+            $500 <span className="text-cs2-orange">Prize Pool</span>
           </h2>
-          <p className="text-white/30 text-sm">+ $500 MVP Bonus</p>
+          <p className="text-white/30 text-sm">+ $50 MVP Bonus</p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 items-end mb-10">
+        <div className="grid grid-cols-3 md:grid-cols-3 gap-3 sm:gap-4 items-end mb-10 max-w-2xl mx-auto">
           {prizes.map((p, i) => (
             <motion.div key={i}
               initial={{ opacity: 0, y: 20 }}
@@ -90,7 +89,7 @@ export default function PrizeSection() {
                 <Star className="w-5 h-5 text-cs2-orange" />
                 <span className="font-bold font-display text-white">Tournament MVP</span>
               </div>
-              <div className="text-3xl font-black font-display text-cs2-orange glow-orange">$500</div>
+              <div className="text-3xl font-black font-display text-cs2-orange glow-orange">$50</div>
               <p className="text-xs text-white/30 mt-1">Best K/D, ADR & Impact</p>
             </div>
           </div>
