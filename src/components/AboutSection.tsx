@@ -97,7 +97,16 @@ export default function AboutSection() {
                   Rahim Yar Khan&apos;s premier sports venue. Professional tournament setup with high-performance gaming PCs.
                 </p>
                 <div className="space-y-2.5 text-sm text-white/50">
-                  <div className="flex items-center gap-2"><MapPin className="w-4 h-4 text-cs2-orange" />Etihad Club, Rahim Yar Khan</div>
+                  <a
+                    href="https://maps.app.goo.gl/cRgQCvtgcjnsuMuG8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 group/link hover:text-cs2-orange transition-colors duration-200"
+                  >
+                    <MapPin className="w-4 h-4 text-cs2-orange" />
+                    <span className="group-hover/link:underline underline-offset-2">Etihad Club, Rahim Yar Khan</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-0 group-hover/link:opacity-100 transition-opacity -ml-1"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
                   <div className="flex items-center gap-2"><Calendar className="w-4 h-4 text-cs2-orange" />Sunday, February 15, 2026</div>
                   <div className="flex items-center gap-2"><Clock className="w-4 h-4 text-cs2-orange" />11:00 AM Sharp</div>
                 </div>
